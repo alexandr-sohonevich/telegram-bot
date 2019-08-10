@@ -11,8 +11,9 @@ type BotInterface interface {
 	MakeNewUpdate() tgbotapi.UpdateConfig
 }
 
-func RunBot() *tgbotapi.BotAPI {
-	bot, err := tgbotapi.NewBotAPI("TOKEN")
+func RunBot(token string) *tgbotapi.BotAPI {
+
+	bot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		log.Panic(err)
 	}

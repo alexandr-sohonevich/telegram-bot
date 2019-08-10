@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	bot := botcontrol.RunBot()
+	token := "961136732:AAEp-ajuio7txrLinE-6QLQlXHguQdxTo5k"
+	bot := botcontrol.RunBot(token)
 	config := botcontrol.MakeNewUpdate()
 
 	updates, _ := bot.GetUpdatesChan(config)
